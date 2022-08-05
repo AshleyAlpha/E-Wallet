@@ -62,21 +62,21 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 100px;
+  padding: 30px 100px 0;
   /* margin: 100px auto; */
 }
 .brand-container {
   background: #eee;
-  width: 1000px;
+  width: 800px;
   margin: 0 auto;
-  border-top: 3px teal;
+  border-top: 3px solid blue;
   border-bottom: 3px solid #43a047;
   box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.915);
-  clip-path: square(16% 0, 100% 0, 90% 100%, 0% 100%);
+  clip-path: polygon(16% 0, 100% 0, 90% 100%, 0% 100%);
 }
 .brand-container h1 {
   text-align: center;
-  color: teal;
+  color: transparent;
   -webkit-background-clip: text;
   background-image: linear-gradient(
     to right,
@@ -88,24 +88,27 @@ body {
   /* background: rgb(147, 31, 31); */
   /* width: 800px; */
 
-  /* padding: 30px; */
+  padding: 30px;
   display: flex;
+  /* padding-top: 30px; */
+  justify-content: center;
+  /* position: relative; */
   /* flex-direction: column; */
   /* align-items: center;
   justify-content: center; */
-  gap: 10px;
+  /* gap: 10px; */
 }
 .btn-container {
   display: flex;
-  justify-content: space-around;
   /* gap: 30px; */
+  /* gap: 2px; */
   width: 100%;
   /* align-items: center;
   justify-content: center; */
 }
 .btn:link,
 .btn:visited {
-  padding: 12px 32px;
+  padding: 12px 18px;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -114,6 +117,7 @@ body {
 }
 .btn-send:link,
 .btn-send:visited {
+  padding: 12px 22px;
   background: rgb(2, 2, 67);
   transition: all 0.3s;
 }
@@ -133,21 +137,28 @@ body {
 .info {
   /* background: red; */
   display: flex;
-  gap: 0;
+  /* gap: -100px; */
   padding: 30px;
   background: #eee;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.915);
   /* background: red; */
   flex-direction: column;
-  width: 100%;
+  width: 50%;
+  position: relative;
 }
 .transation {
-  width: 100%;
+  width: 30%;
   display: flex;
-  padding: 0 30px;
+  padding: 30px;
   flex-direction: column;
   background: #eee;
-  justify-content: center;
+  position: absolute;
+  top: 38%;
+  left: 45%;
+  height: auto;
+
+  /* text-transform: uppercase; */
+  /* justify-content: center; */
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.915);
 
   gap: 30px;
@@ -165,14 +176,17 @@ body {
 
   background-image: linear-gradient(to right, rgb(75, 75, 115), blue);
   /* text-align: center; */
-  color: teal;
+  color: transparent;
+
   -webkit-background-clip: text;
-  font-size: 28px;
+  font-size: 24px;
+}
+.align {
+  text-align: center;
 }
 input {
   padding: 8px;
-  display: flex;
-
+  width: 100%;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.281);
 }
 .more-info {
@@ -181,4 +195,45 @@ input {
 }
 p span {
   font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .xyz {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .account {
+    gap: 10px;
+  }
+  .brand-container {
+    width: 90%;
+  }
+  .info {
+    width: 80%;
+  }
+  .transation {
+    position: relative;
+    width: 80%;
+    top: 0;
+    left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .xyz {
+    padding: 10px 0px;
+  }
+  .info {
+    width: 80%;
+  }
+  .transation {
+    position: relative;
+    width: 80%;
+    top: 0;
+    left: 0;
+  }
+
+  .account {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
 }
