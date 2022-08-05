@@ -72,7 +72,7 @@ body {
   border-top: 3px solid blue;
   border-bottom: 3px solid #43a047;
   box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.915);
-  clip-path: polygon(16% 0, 100% 0, 90% 100%, 0% 100%);
+  clip-path: square(16% 0, 100% 0, 90% 100%, 0% 100%);
 }
 .brand-container h1 {
   text-align: center;
@@ -118,12 +118,12 @@ body {
 .btn-send:link,
 .btn-send:visited {
   padding: 12px 22px;
-  background: rgb(2, 2, 67);
+  background: teal;
   transition: all 0.3s;
 }
 .btn-send:hover,
 .btn-send:active {
-  background: rgb(15, 15, 138);
+  background: grey;
 }
 .btn-receive:link,
 .btn-receive:visited {
@@ -152,7 +152,7 @@ body {
   padding: 30px;
   flex-direction: column;
   background: #eee;
-  position: absolute;
+  position: sticky;
   top: 38%;
   left: 45%;
   height: auto;
