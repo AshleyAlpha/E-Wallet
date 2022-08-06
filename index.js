@@ -1,3 +1,7 @@
+$(".message a").click(function () {
+  $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+});
+
 let balance = document.getElementById("initial");
 let receive = document.getElementById("receive");
 let send = document.getElementById("send");
@@ -47,9 +51,7 @@ sendBtn.addEventListener("click", () => {
   }
 });
 
-$(".message a").click(function () {
-  $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
-});
+
 const signUp = (e) => {
   let fname = document.getElementById("fname").value,
     lname = document.getElementById("lname").value,
